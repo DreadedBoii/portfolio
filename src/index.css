@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'Share Tech Mono', monospace;
+    --font-terminal: 'VT323', monospace;
+    --font-sans: 'Share Tech Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-mono);
+    background-color: #090a0c;
+    color: #e5e7eb;
+    letter-spacing: 0.03em;
+  }
+}
+
+.font-terminal {
+  font-family: var(--font-terminal);
+}
+
+.font-tech {
+  font-family: var(--font-mono);
+}
+
+/* Minimalist Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Subtle Cursor Blink for Terminal Prompt */
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s infinite;
+}
+
